@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+.carousel {
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin-left: 30%;
+}
+
+.carouselContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carouselContentItem {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carouselContentItem img {
+    width: 100%;
+    height: 100%;
+}
+
+.carouselButton {
+    display: flex;
+    width: 600px;
+    justify-content: space-evenly;
+}
