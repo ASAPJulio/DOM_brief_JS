@@ -1,19 +1,26 @@
+body {
+    background-image: linear-gradient(to right, rgba(255, 204, 255, 0.3),rgba(51, 204, 255, 0.2));
+}
+
 main {
     margin-left: 29%;
 }
 
 #todo-list {
-    background-color: white;
     color: #1E2337;
     width: 50%;
     padding: 4rem;
+}
+
+#todo {
+    background: none;
 }
 
 #todo-list input {
     width: 100%;
     color: rgb(44, 43, 43);
     font-size: 2rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(255, 255, 255);
     padding: 1rem;
     border: 1px dashed rgb(105, 19, 105);
     border-width: 0px 0px 1px 0px;
@@ -29,12 +36,13 @@ button {
     width: 4rem;
     height: 4rem;
     cursor: pointer;
+    background-color: white;
 }
 
 .item {
     text-align: justify;
     margin: 1rem;
-    background-color: rgb(222, 221, 221);
+    background-color: white;
     font-size: 2rem;
     color: rgb(105, 19, 105);
     display: flex;
