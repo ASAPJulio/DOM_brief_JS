@@ -1,12 +1,13 @@
 h1 {
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .carousel {
     width: 600px;
     height: 300px;
     position: relative;
-    margin-left: 30%;
+    margin-left: 33%;
 }
 
 .carouselContent {
@@ -15,6 +16,7 @@ h1 {
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
+    border-radius: 5px;
 }
 
 .carouselContentItem {
@@ -31,4 +33,13 @@ h1 {
     display: flex;
     width: 600px;
     justify-content: space-evenly;
+}
+
+button {
+    border: none;
+    width: 10rem;
+    height: 4rem;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }

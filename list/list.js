@@ -5,7 +5,7 @@ const todoInput = document.getElementById('todo');
 
 formToDoList.addEventListener('submit', function (e) {
     e.preventDefault();
-    const todoValue = todo.value;
+    const todoValue = todoInput.value;
 
     let item = `
                 <div class="item">
