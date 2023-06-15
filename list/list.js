@@ -42,3 +42,39 @@ formToDoList.addEventListener('submit', function (e) {
     };
     formToDoList.reset();
 });
+
+
+// const formToDoList = document.getElementById('form');
+// const todoInput = document.getElementById('todo');
+// const listItems = document.querySelector('.list-items');
+
+// formToDoList.addEventListener('submit', function (e) {
+//   e.preventDefault();
+//   const todoValue = todoInput.value.trim();
+
+//   if (todoValue !== '') {
+//     const itemTemplate = document.getElementById('item-template');
+//     const newItem = document.importNode(itemTemplate.content, true);
+//     const todoText = newItem.querySelector('.todo-text');
+//     const btnDelete = newItem.querySelector('.btn-delete');
+//     const btnArchive = newItem.querySelector('.btn-archive');
+
+//     todoText.textContent = todoValue;
+//     btnDelete.addEventListener('click', deleteItem);
+//     btnArchive.addEventListener('click', toggleDone);
+
+//     listItems.appendChild(newItem);
+//   }
+
+//   formToDoList.reset();
+// });
+
+// function deleteItem(e) {
+//   const item = e.target.parentElement;
+//   item.remove();
+// }
+
+// function toggleDone(e) {
+//   const item = e.target.parentElement;
+//   item.classList.toggle('done');
+// }
