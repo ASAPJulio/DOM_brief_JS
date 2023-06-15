@@ -1,4 +1,3 @@
-// On commence par déclarer toutes nos variables qui nous seront utiles par la suite
 
 let p1Button = document.querySelector("#p1"); 
 let p2Button =  document.querySelector("#p2");
