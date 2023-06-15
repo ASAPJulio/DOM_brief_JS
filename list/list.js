@@ -1,12 +1,14 @@
 "use strict"
-
+// Déclaration de 2 const en donnant comme valeur les balises form/todo
 const formToDoList = document.getElementById('form');
 const todoInput = document.getElementById('todo');
 
+
 formToDoList.addEventListener('submit', function (e) {
     e.preventDefault();
+    // Ici, on veut que todoValue ait la valeur du contenu de l'input
     const todoValue = todoInput.value;
-
+    // Si la valeur du contenu input est strictement différent à "vide", alors on déclare une variable item comprenant notre contenu input
     if (todoValue.trim() !== '') {
         let item = `
                 <div class="item">
@@ -17,10 +19,10 @@ formToDoList.addEventListener('submit', function (e) {
                     </button>
                 </div>
         `
-
+    // Une fois l'item crée, on va venir l'ajouter à la liste avec la concaténation
         const listItems = document.querySelector('.list-items');
         listItems.innerHTML += item;
-
+    // On instentie ici notre bouton delete en utilisant une boucle forEach
         const btnDelete = document.querySelectorAll('.btn-delete');
         btnDelete.forEach(i => {
             console.log('btn-delete')
@@ -29,7 +31,7 @@ formToDoList.addEventListener('submit', function (e) {
                 i.parentElement.remove();
             });
         });
-
+    // Même principe que delete mais ici pour le bouton archiver qui va venir barré la tâche effectuée
         const btnArchive = document.querySelectorAll('.btn-archive');
         btnArchive.forEach(i => {
             console.log('btn-archive');
@@ -40,41 +42,6 @@ formToDoList.addEventListener('submit', function (e) {
         });
 
     };
+    // En rajoutant la methode .reset, on "refresh" notre barre input à chaque ajout de contenu
     formToDoList.reset();
 });
-
-
-// const formToDoList = document.getElementById('form');
-// const todoInput = document.getElementById('todo');
-// const listItems = document.querySelector('.list-items');
-
-// formToDoList.addEventListener('submit', function (e) {
-//   e.preventDefault();
-//   const todoValue = todoInput.value.trim();
-
-//   if (todoValue !== '') {
-//     const itemTemplate = document.getElementById('item-template');
-//     const newItem = document.importNode(itemTemplate.content, true);
-//     const todoText = newItem.querySelector('.todo-text');
-//     const btnDelete = newItem.querySelector('.btn-delete');
-//     const btnArchive = newItem.querySelector('.btn-archive');
-
-//     todoText.textContent = todoValue;
-//     btnDelete.addEventListener('click', deleteItem);
-//     btnArchive.addEventListener('click', toggleDone);
-
-//     listItems.appendChild(newItem);
-//   }
-
-//   formToDoList.reset();
-// });
-
-// function deleteItem(e) {
-//   const item = e.target.parentElement;
-//   item.remove();
-// }
-
-// function toggleDone(e) {
-//   const item = e.target.parentElement;
-//   item.classList.toggle('done');
-// }
