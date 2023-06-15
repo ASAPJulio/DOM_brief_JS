@@ -1,14 +1,18 @@
-let p1Button = document.querySelector("#p1");
+// On commence par déclarer toutes nos variables qui nous seront utiles par la suite
+
+let p1Button = document.querySelector("#p1"); 
 let p2Button =  document.querySelector("#p2");
-let resetButton = document.querySelector("#reset");
+let resetButton = document.querySelector("#reset"); //Pour refresh
 let p1Display = document.querySelector("#p1Display");
 let p2Display = document.querySelector("#p2Display");
 let numInput = document.querySelector("input[type='number']");
 let winningScoreDisplay = document.querySelector("p span");
-let p1Score = 0;
-let p2Score = 0;
-let gameOver = false;
-let winningScore = 5;
+let p1Score = 0; // Score de base joueur 1
+let p2Score = 0; // Score de base joueur 2
+let gameOver = false; // Affectation false par défaut
+let winningScore = 5; // Score max par défaut
+
+
 
 p1Button.addEventListener("click", function(){
   if (!gameOver) {
