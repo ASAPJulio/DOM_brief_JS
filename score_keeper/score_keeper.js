@@ -12,8 +12,6 @@ let p2Score = 0; // Score de base joueur 2
 let gameOver = false; // Affectation false par défaut
 let winningScore = 5; // Score max par défaut
 
-
-
 p1Button.addEventListener("click", function(){
   if (!gameOver) {
     p1Score++;

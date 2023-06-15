@@ -23,18 +23,40 @@ function attackMonster() {
 
 // Fonction pour gérer l'attaque spéciale du joueur
 function specialAttackMonster() {
-  // Logique pour l'attaque spéciale du joueur...
+  const minDamage = 10;
+  const maxDamage = 20;
+  const growDamage = Math.floor(Math.random() * (maxDamage - minDamage + 1)) + minDamage;
+  monsterHealth -= growDamage;
+  if (monsterHealth <= 0) {
+    monsterHealth = 0;
+    endGame('Player wins!');
+  }
+  monsterHealthElement.textContent = monsterHealth;
 }
+  // Logique pour l'attaque spéciale du joueur...
+
 
 // Fonction pour gérer la guérison du joueur
 function healPlayer() {
-  // Logique pour la guérison du joueur...
+  const healAmount = 10;
+
+  if (playerHealth === 100) {
+    return;
+  }
+
+  playerHealth += healAmount;
+
+  if (playerHealth > 100) {
+    playerHealth = 100;
+  }
+
+  playerHealthElement.textContent = playerHealth;
 }
 
-// Fonction pour mettre fin au jeu
 function endGame(message) {
   // Logique pour afficher le message de fin de jeu...
 }
+
 
 // Événements de clic pour les boutons d'attaque
 attackBtn.addEventListener('click', attackMonster);
