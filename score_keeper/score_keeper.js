@@ -4,7 +4,7 @@ let p2Button =  document.querySelector("#p2");
 let resetButton = document.querySelector("#reset"); //Pour refresh
 let p1Display = document.querySelector("#p1Display");
 let p2Display = document.querySelector("#p2Display");
-let numInput = document.querySelector("input[type='number']");
+let numInput = document.querySelector("input[type='text']");
 let winningScoreDisplay = document.querySelector("p span");
 let p1Score = 0; // Score de base joueur 1
 let p2Score = 0; // Score de base joueur 2
