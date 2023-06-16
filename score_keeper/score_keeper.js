@@ -1,4 +1,6 @@
 
+////////////////////////////////////////WORK IN PROGRESS////////////////////////////////////////////////////////////////////////////////////
+
 let p1Button = document.querySelector("#p1"); 
 let p2Button =  document.querySelector("#p2");
 let resetButton = document.querySelector("#reset"); //Pour refresh
