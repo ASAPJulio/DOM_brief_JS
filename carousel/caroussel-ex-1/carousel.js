@@ -1,11 +1,11 @@
 "use strict"
 
-// Je déclare une variable qui a pour valeur la taille(largeur) du contenair carousel
+// Je déclare une variable qui a pour valeur la taille(largeur) grace à offsetwidth du contenair carousel
 // I declare a variable whose value is the size (width) of the container carousel
 const widthCarousel = document.querySelector('.carousel').offsetWidth;
 
 
-// Je déclare une fonction qui à pour but de passer à l'image suivante
+// Je déclare une fonction qui à pour but de passer à l'image suivante ayant une distance égale à widthCarousel
 // I declare a function whose purpose is to pass to the next image
 function previousSwitch() {
     document.querySelector('.carouselContent').scrollLeft -= widthCarousel;
